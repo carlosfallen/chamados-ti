@@ -8,6 +8,27 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Lista de setores
+  const sectors = [
+    'Gerente',
+    'Correspondente bancário',
+    'Frente de caixa',
+    'Vendas atacado',
+    'Coordenadores',
+    'S.A.T.E',
+    'Alternativo',
+    'Fracionado',
+    'Recebimento',
+    'Notas Fiscais',
+    'TI',
+    'Transporte',
+    'Marketing',
+    'RH',
+    'Compras',
+    'Auditoria',
+    'Tesouraria'
+  ];
+
   // Verifica se o usuário já está logado
   useEffect(() => {
     const user = localStorage.getItem('user');
@@ -96,13 +117,18 @@ const LoginPage = () => {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Setor</label>
-            <input
-              type="text"
+            <select
               className="w-full border border-input bg-white px-3 py-2 rounded-md text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 placeholder:text-muted-foreground"
-              placeholder="Seu setor (ex.: TI, Vendas)"
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
-            />
+            >
+              <option value="">Selecione um setor</option>
+              {sectors.map((sector) => (
+                <option key={sector} value={sector}>
+                  {sector}
+                </option>
+              ))}
+            </select>
           </div>
           <button
             className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
