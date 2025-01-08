@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                    // Define a versão do JavaScript gerada
+      "module": "ESNext",                 // Define o módulo para o ESNext (para compatibilidade com imports modernos)
+      "moduleResolution": "node",         // Resolução de módulos do Node.js
+      "jsx": "react-jsx",                 // Configuração para JSX no React
+      "esModuleInterop": true,            // Permite a interoperabilidade entre módulos ES e CommonJS
+      "skipLibCheck": true,               // Ignora checagens de tipos nas bibliotecas
+      "forceConsistentCasingInFileNames": true, // Garante que o nome do arquivo seja consistente (importações sensíveis a maiúsculas/minúsculas)
+      "strict": true,                     // Ativa a verificação estrita de tipos (fortalece a segurança do tipo)
+      "noImplicitAny": true,              // Impede o uso do tipo `any` implícito
+      "resolveJsonModule": true,          // Permite importar arquivos JSON como módulos
+      "isolatedModules": true,            // Garante que cada arquivo seja tratado como um módulo isolado
+      "skipDefaultLibCheck": true         // Ignora a verificação de tipos para bibliotecas padrão
+    },
+    "include": [
+      "src/**/*"                          // Inclui todos os arquivos dentro da pasta src
+    ],
+    "exclude": [
+      "node_modules",                     // Exclui a pasta node_modules
+      "build"                             // Exclui a pasta build (se existir)
+    ]
+  }
+  
