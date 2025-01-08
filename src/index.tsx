@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
-import TicketForm from './pages/TicketDashboard';
+import TicketForm from './pages/TicketForm';
 import './index.css';
 
 const App = () => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
-import TicketForm from './pages/TicketDashboard';
+import TicketForm from './pages/TicketForm';
 
 const App: React.FC = () => {
   return (
